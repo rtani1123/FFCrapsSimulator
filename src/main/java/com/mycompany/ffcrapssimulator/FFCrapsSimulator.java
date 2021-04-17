@@ -54,7 +54,7 @@ public class FFCrapsSimulator {
             for(int i=0; i< 100000; i++) {
                 startingTotal = houseMoney;
                 gamePlay(edge);
-                if(startingTotal < houseMoney) houseWinCounter++;
+                if(startingTotal < houseMoney && !noPassPush) houseWinCounter++; // the house wins if profit is > 0, and there are no other bets in play that could possibly pay out higher than house profit.
                 //System.out.println("House Total: " + houseMoney);
             }
 //            System.out.println("House Initial was: " + houseInitialTotal);
